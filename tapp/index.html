@@ -18,17 +18,21 @@
   </body>
   <script>
     //index.html#param1=value1&param2=value2
-    const hashParams = new URLSearchParams(window.location.hash.substring(1));
-    console.log(hashParams);
-    const hParam1 = hashParams.get('param1');
-    if (hParam1.length > 0) {
-      document.getElementById('hashParam').innerText = hParam1;
+    if (window.location.hash.substring(1)) {
+      const hashParams = new URLSearchParams(window.location.hash.substring(1));
+      const hParam1 = hashParams.get('param1');
+      if (hParam1.length > 0) {
+        document.getElementById('hashParam').innerText = hParam1;
+      }
     }
+
     //index.html?param1=value1&param2=value2
-    const urlParams = new URLSearchParams(window.location.search);
-    const uParam1 = urlParams.get('param1');
-    if (uParam1.length > 0) {
-      document.getElementById('hashParam').innerText = uParam1;
+    if (window.location.search) {
+      const urlParams = new URLSearchParams(window.location.search);
+      const uParam1 = urlParams.get('param1');
+      if (uParam1.length > 0) {
+        document.getElementById('hashParam').innerText = uParam1;
+      }
     }
   </script>
 </html>
