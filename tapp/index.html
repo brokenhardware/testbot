@@ -19,6 +19,7 @@
   <script>
     //index.html#param1=value1&param2=value2
     const hashParams = new URLSearchParams(window.location.hash.substring(1));
+    console.log(hashParams);
     const hParam1 = hashParams.get('param1');
     if (hParam1.length > 0) {
       document.getElementById('hashParam').innerText = hParam1;
