@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test app</title>
+  </head>
+  <body style="font-family: sans-serif;">
+    <div>Test app</div>
+    <div>
+      <span>Hash param:</span>
+      <span id="hashParam"></span>
+    </div>
+     <div>
+      <span>URL param:</span>
+      <span id="urlParam"></span>
+    </div>
+  </body>
+  <script>
+    //index.html#param1=value1&param2=value2
+    const hashParams = new URLSearchParams(window.location.hash.substring(1));
+    const hParam1 = hashParams.get('param1');
+    if (hParam1.length > 0) {
+      document.getElementById('hashParam').innerText = hParam1;
+    }
+    //index.html?param1=value1&param2=value2
+    const urlParams = new URLSearchParams(window.location.search);
+    const uParam1 = urlParams.get('param1');
+    if (uParam1.length > 0) {
+      document.getElementById('hashParam').innerText = uParam1;
+    }
+  </script>
+</html>
