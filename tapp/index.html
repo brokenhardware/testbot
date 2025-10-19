@@ -42,7 +42,7 @@ Telegram.WebApp.MainButton.text = "Пригласить";
 Telegram.WebApp.MainButton.show();
 
 Telegram.WebApp.MainButton.onClick(() => {
-  const appLink = "https://t.me/githubbot1_bot/startapp=abcdef";
+  const appLink = "https://t.me/githubbot1_bot?startapp=abcdef";
   const messageText = "Link to miniapp";
   
   const telegramShareUrl = `https://t.me/share/url?url=${encodeURIComponent(appLink)}&text=${encodeURIComponent(messageText)}`;
